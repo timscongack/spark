@@ -109,11 +109,8 @@ logs/
 *.tmp
 *.temp
 
-# Data files (uncomment if you want to ignore data)
-# data/*.csv
-# data/*.json
-# data/*.parquet
-# data/*.avro
+# Data files
+data/
 
 # Spark application logs
 spark-logs/ 

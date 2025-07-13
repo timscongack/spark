@@ -14,26 +14,12 @@ docker-compose up -d
 - Spark Master UI: http://localhost:8080
 - Jupyter Lab: http://localhost:8888
 
-### 3. Run an Example Operation
+### 3. Download Data
 
-Use `spark-submit` inside the master container. For example, to run the basic CSV read example:
+The data folder is not included in this repository due to size constraints. You can download the required data files from the official Spark Definitive Guide repository:
 
-```bash
-docker exec -it spark-master spark-submit \
-  --master spark://spark-master:7077 \
-  /opt/bitnami/spark/examples/transformations/01-basics/read_flight_csv.py
-```
+**Download data from:** https://github.com/databricks/Spark-The-Definitive-Guide/tree/master/data
 
----
+Place the downloaded data files in the `data/` directory in your local repository.
 
-This example demonstrates how to read a CSV file using Spark DataFrame API.
-
-## How to Run
-
-```bash
-docker exec -it spark-master spark-submit \
-  --master spark://spark-master:7077 \
-  /opt/bitnami/spark/examples/transformations/01-basics/read_flight_csv.py
-```
-
-The script reads the `data/flight-data/csv/2010-summary.csv` file and prints the first 5 rows. 
+### 4. Open Notebooks in VS code/cursor and connect to jupyter kernal at `http://localhost:8888`
